@@ -1,0 +1,10 @@
+.*
+*.o
+*.d
+*test*
+a.out
+bureaucrat
+form
+shrubbery
+*_shrubbery
+intern

@@ -1,0 +1,6 @@
+.*
+*.o
+*.d
+*test*
+a.out
+bsp

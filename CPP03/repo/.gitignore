@@ -1,0 +1,9 @@
+.*
+*.o
+*.d
+*test*
+a.out
+claptrap
+scavtrap
+fragtrap
+diamondtrap

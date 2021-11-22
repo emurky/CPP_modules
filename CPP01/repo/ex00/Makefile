@@ -1,0 +1,36 @@
+SRCS				= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+OBJS				= $(SRCS:.cpp=.o)
+DEPS				= $(SRCS:.cpp=.d)
+
+NAME				= zooombiiiiieeeeeees
+
+CXX					= clang++
+RM 					= rm -f
+CXXFLAGS			= -Wall -Wextra -Werror -std=c++98 -pedantic-errors
+CPPFLAGS			= -MMD -I.
+
+all:				$(NAME)
+
+$(OBJS):			Makefile
+
+$(NAME):			$(OBJS)
+					$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+
+-include			$(DEPS)
+
+clean:
+					$(RM) $(OBJS) $(DEPS)
+
+fclean:				clean
+					$(RM) $(NAME)
+
+re:					fclean all
+
+sc:
+					rm -rf *.o *.a */*.o */*.a */*.d *.d $(NAME)
+
+.PHONY:				all clean fclean re bonus \
+					sc
+
+#.SILENT:
+# leaks --atExit --
